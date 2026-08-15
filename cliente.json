@@ -1,0 +1,177 @@
+{
+  "_comentario": "Ficha del cliente. Es la única fuente de verdad: los tres scripts leen de acá. Copiala a cliente.json y completala antes de generar nada.",
+  "cliente": {
+    "nombre": "Mediterráneo Hotel & Spa",
+    "nombre_corto": "Mediterráneo",
+    "rubro": "hotel",
+    "direccion": "Corrientes 1510, Rosario",
+    "sitio": "https://mediterraneohotelyspa.com.ar",
+    "contacto_nombre": "",
+    "contacto_cargo": ""
+  },
+  "marca": {
+    "_comentario": "Extraídos del sitio del cliente. Los logos son rutas a archivos PNG locales.",
+    "logo_claro": "assets_cliente/logo-blanco.png",
+    "logo_oscuro": null,
+    "fondo_profundo": "#3B332B",
+    "acento": "#C9B296",
+    "medio": "#9C8A79",
+    "base_clara": "#EAE4DC",
+    "base_clara_2": "#DFD7CC",
+    "tinta": "#332D26",
+    "tinta_2": "#6B6055",
+    "fuente_titulos": "Abhaya Libre",
+    "fuente_texto": "Montserrat"
+  },
+  "landing": {
+    "titulo": "Acá podés estar\na tu manera.",
+    "intro_titulo": "Nadie te va a pedir que expliques nada.",
+    "intro_1": "Nuestro equipo de recepción está capacitado para acompañar a personas que se comunican y perciben de distintas formas. No hace falta mirar a los ojos, ni hablar, ni dar explicaciones.",
+    "intro_2": "Esta página te cuenta qué va a pasar, dónde podés estar tranquilo y cómo pedir lo que necesites sin tener que decirlo.",
+    "pasos_titulo": "El check-in, paso a paso",
+    "pasos": [
+      {
+        "t": "Entrás por Corrientes 1510",
+        "d": "Puerta de vidrio, después un hall corto. La recepción está a mano derecha.",
+        "dura": null
+      },
+      {
+        "t": "Te atienden en el mostrador",
+        "d": "Te van a pedir DNI y una tarjeta. Podés escribir en el celular en vez de hablar.",
+        "dura": "Suele tardar entre 5 y 10 minutos"
+      },
+      {
+        "t": "Si hay que esperar, te avisan cuánto",
+        "d": "Podés esperar sentado en el sector tranquilo, no de pie en el mostrador.",
+        "dura": null
+      },
+      {
+        "t": "Subís a la habitación",
+        "d": "El ascensor está al fondo del hall. Si preferís evitarlo, avisanos.",
+        "dura": null
+      }
+    ],
+    "espacios": [
+      {
+        "t": "Sala tranquila",
+        "d": "Sala de reuniones con puerta, luz regulable y sin música. Pedila en recepción y te la abren.",
+        "tags": [
+          "Sin música",
+          "Luz regulable",
+          "Puerta cerrada"
+        ]
+      },
+      {
+        "t": "Terraza del piso 9",
+        "d": "Al aire libre, junto al desayunador. Es el lugar más despejado del hotel fuera del horario de desayuno.",
+        "tags": [
+          "Aire libre",
+          "Poca gente",
+          "Sin techo"
+        ]
+      },
+      {
+        "t": "Desayuno en horario tranquilo",
+        "d": "Entre las 7:00 y las 8:00 hay poca gente. Si preferís, te lo llevamos a la habitación sin cargo.",
+        "tags": [
+          "Menos ruido",
+          "Opción en habitación"
+        ]
+      }
+    ],
+    "opciones_tarjeta": [
+      {
+        "boton": "Prefiero escribir en vez de hablar",
+        "msg": "Prefiero escribir",
+        "sub": "Escribí acá o en tu celular. Nos tomamos el tiempo que haga falta."
+      },
+      {
+        "boton": "Necesito un lugar tranquilo",
+        "msg": "Necesito un lugar tranquilo",
+        "sub": "Te acompañamos a la sala tranquila. Volvés cuando quieras."
+      },
+      {
+        "boton": "Necesito más tiempo",
+        "msg": "Necesito más tiempo",
+        "sub": "Sin apuro. Avisanos cuando estés listo."
+      }
+    ],
+    "demo": true
+  },
+  "propuesta": {
+    "resumen": "Un programa para que el equipo del hotel sepa cómo recibir a huéspedes autistas, con TDAH u otras neurodivergencias — y para que esas familias sepan, antes de llegar, que acá van a estar bien.",
+    "oportunidad_titulo": "El Mediterráneo ya tiene lo que hace falta",
+    "oportunidad": "La sala de reuniones con puerta, la terraza del piso 9 y los horarios de menor flujo en el desayunador son, hoy, espacios de calma sin nombre. El programa no requiere obra ni inversión edilicia: <strong>identifica, señaliza y protocoliza lo que ya existe</strong>, y capacita al equipo para usarlo.",
+    "momentos_criticos": "check-in, desayuno y salón",
+    "precio_implementacion": "USD 850",
+    "precio_licencia": "USD 480",
+    "precio_primer_ano": "USD 990",
+    "bonificacion": "40%",
+    "ciudad": "Rosario",
+    "fecha": "Agosto 2026"
+  },
+  "capacitacion": {
+    "equipo": "recepción",
+    "escenas": [
+      {
+        "t": "No te mira a los ojos",
+        "d": "Contesta corto, mira al piso o al costado. No es desinterés ni mala educación: es cómo se comunica."
+      },
+      {
+        "t": "Un chico grita o se tira al piso",
+        "d": "No es un capricho. Es sobrecarga sensorial. La reacción de la gente alrededor la empeora."
+      },
+      {
+        "t": "Repite la misma pregunta",
+        "d": "No es que no te escuchó. Necesita confirmar para bajar la incertidumbre."
+      },
+      {
+        "t": "Se queda trabado sin responder",
+        "d": "Cuando el sistema se satura, el habla es lo primero que se apaga. Necesita tiempo, no insistencia."
+      }
+    ],
+    "espacios": [
+      {
+        "t": "Sala tranquila",
+        "d": "La sala de reuniones. Puerta cerrada, sin música, luz regulable.",
+        "cuando": "Ofrecela ante cualquier señal de sobrecarga en el hall."
+      },
+      {
+        "t": "Terraza del piso 9",
+        "d": "Al aire libre, junto al desayunador. El lugar más despejado del hotel.",
+        "cuando": "Ideal fuera del horario de desayuno."
+      },
+      {
+        "t": "Desayuno temprano",
+        "d": "Entre 7:00 y 8:00 hay poca gente. También se puede servir en la habitación.",
+        "cuando": "Ofrecelo al hacer el check-in, no al día siguiente."
+      }
+    ],
+    "casos": [
+      {
+        "t": "Check-in a las 23:00",
+        "d": "Llega una familia con un chico de nueve años que grita y se tapa los oídos. Hay otros dos huéspedes esperando y el padre está tenso.",
+        "p": "¿Qué hacés primero?"
+      },
+      {
+        "t": "El huésped que no habla",
+        "d": "Un hombre de unos treinta se para frente al mostrador, mira el celular y no dice nada. Pasan quince segundos.",
+        "p": "¿Qué le decís?"
+      },
+      {
+        "t": "Evento en el salón",
+        "d": "Durante una fiesta, una adolescente sale al pasillo llorando. No conocés a la familia y no sabés con quién vino.",
+        "p": "¿Qué hacés y qué no hacés?"
+      }
+    ],
+    "notas_casos": "Caso 1: la respuesta correcta empieza por sacar a la familia del centro de la escena, no por calmar al chico. Caso 2: silencio y una opción cerrada. Caso 3: no tocar, no buscar a los padres a los gritos, ofrecer el espacio y avisar discretamente."
+  },
+  "senaletica": {
+    "_comentario": "Textos y datos de las piezas impresas. url_corta es la que codifica el QR: nunca la ruta final.",
+    "url_corta": "espacios.eneio.online/e/med",
+    "titular": "Acá podés estar\na tu manera.",
+    "bajada": "Escaneá para saber qué vas a encontrar acá: los tiempos, los espacios tranquilos y cómo pedir lo que necesites sin tener que hablar.",
+    "bajada_corta": "Qué vas a encontrar, dónde estar tranquilo y cómo pedir lo que necesites.",
+    "vigencia": "2026"
+  }
+}
