@@ -2,8 +2,10 @@
 <html lang="es-AR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#3B332B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Espacio Neuroamigable · Mediterráneo Hotel &amp; Spa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +24,13 @@
   --mica-gris:#565E71;
   --r:14px;
 }
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;padding:0}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
+html{height:100%;width:100%}
 body{
+  margin:0;padding:0;
+  height:100vh;width:100%;
+  position:fixed;
+  overflow:hidden;
   background:var(--greige);
   color:var(--tinta);
   font-family:'Montserrat',system-ui,sans-serif;
@@ -32,9 +38,23 @@ body{
   font-size:clamp(16px,4.5vw,18px);
   line-height:1.62;
   -webkit-font-smoothing:antialiased;
-  -webkit-text-size-adjust:100%
+  -webkit-text-size-adjust:100%;
+  -webkit-user-select:none;
+  user-select:none
 }
-.wrap{max-width:100%;margin:0 auto;padding-bottom:104px;width:100%}
+.wrap{
+  max-width:100%;
+  margin:0;
+  padding-bottom:120px;
+  width:100%;
+  height:calc(100vh - 120px);
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0
+}
 
 /* ---------- cabecera ---------- */
 .top{background:var(--marron);padding:28px 16px 24px;text-align:center}
