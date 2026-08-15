@@ -45,15 +45,16 @@ body{
 .wrap{
   max-width:100%;
   margin:0;
-  padding-bottom:120px;
+  padding-bottom:140px;
   width:100%;
-  height:calc(100vh - 120px);
+  height:100vh;
   overflow-y:auto;
   -webkit-overflow-scrolling:touch;
   position:absolute;
   top:0;
   left:0;
-  right:0
+  right:0;
+  bottom:0
 }
 
 /* ---------- cabecera ---------- */
@@ -166,9 +167,10 @@ ol.pasos li:not(:last-child)::before{
 
 /* ---------- barra fija ---------- */
 .barra{
-  position:fixed;left:0;right:0;bottom:0;z-index:40;
-  background:linear-gradient(to top, var(--greige) 66%, rgba(234,228,220,0));
-  padding:14px 18px calc(16px + env(safe-area-inset-bottom));width:100%
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:linear-gradient(to top, var(--greige) 60%, rgba(234,228,220,.8) 100%);
+  padding:18px 14px calc(20px + env(safe-area-inset-bottom));width:100%;
+  backdrop-filter:blur(4px)
 }
 .barra-in{max-width:520px;margin:0 auto;padding:0 6px}
 .btn-momento{
@@ -216,7 +218,8 @@ footer img{width:110px;height:auto;opacity:.9;margin-bottom:10px}
 footer p{font-size:12px;color:var(--taupe);margin:0 0 3px;line-height:1.6}
 .demo{
   background:var(--marron-2);color:var(--arena);font-size:11px;letter-spacing:.1em;
-  text-transform:uppercase;text-align:center;padding:6px 12px;margin-top:8px
+  text-transform:uppercase;text-align:center;padding:6px 12px;margin:0;
+  position:relative;z-index:1
 }
 
 :focus-visible{outline:2.5px solid var(--mica);outline-offset:2px}
