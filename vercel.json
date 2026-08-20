@@ -3,14 +3,27 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/e/med", "destination": "/mediterraneo", "permanent": false },
-    { "source": "/", "destination": "/mediterraneo", "permanent": false }
+    {
+      "source": "/wa",
+      "destination": "https://wa.me/5493416407634?text=Hola%20Nicol%C3%A1s%2C%20quiero%20pedir%20la%20visita%20de%20diagn%C3%B3stico%20del%20Programa%20Espacio%20Neuroamigable.",
+      "permanent": false
+    },
+    {
+      "source": "/e/med",
+      "destination": "/mediterraneo",
+      "permanent": false
+    }
   ],
   "headers": [
     {
+      "source": "/(mediterraneo|.*/equipo)(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
         { "key": "Referrer-Policy", "value": "no-referrer" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=(), interest-cohort=()" }
