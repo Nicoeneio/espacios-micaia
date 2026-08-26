@@ -1,0 +1,164 @@
+{
+  "cliente": {
+    "nombre": "Espacio Neuroamigable",
+    "nombre_corto": "Espacio",
+    "rubro": "espacio público",
+    "direccion": "",
+    "sitio": "",
+    "contacto_nombre": "",
+    "contacto_cargo": ""
+  },
+  "marca": {
+    "logo_claro": "assets_cliente/logo-blanco.png",
+    "logo_oscuro": null,
+    "fondo_profundo": "#3B332B",
+    "fondo_profundo_2": "#3B332B",
+    "base_clara": "#EAE4DC",
+    "base_clara_2": "#DFD7CC",
+    "acento": "#7FB0D9",
+    "medio": "#9C8A79",
+    "tinta": "#332D26",
+    "tinta_2": "#6B6055",
+    "fuente_titulos": "Abhaya Libre",
+    "fuente_texto": "Montserrat"
+  },
+  "landing": {
+    "titulo": "Acá podés estar\na tu manera.",
+    "intro_titulo": "Nadie te va a pedir que expliques nada.",
+    "intro_1": "Este espacio está capacitado para acompañar a personas que se comunican y perciben de distintas formas. No hace falta mirar a los ojos, ni hablar, ni dar explicaciones.",
+    "intro_2": "Esta página te cuenta qué vas a encontrar, dónde podés estar tranquilo y cómo pedir lo que necesites sin tener que decirlo.",
+    "pasos_titulo": "Qué va a pasar",
+    "pasos": [
+      {
+        "t": "Llegada",
+        "d": "Te reciben en la entrada. El equipo está capacitado para acompañar a personas neurodivergentes.",
+        "dura": null
+      },
+      {
+        "t": "Atención personalizada",
+        "d": "Podés comunicarte como prefieras. Si necesitás escribir en lugar de hablar, sin problema.",
+        "dura": null
+      },
+      {
+        "t": "Si necesitás descansar",
+        "d": "Hay espacios tranquilos disponibles donde podés estar sin estimulación.",
+        "dura": null
+      },
+      {
+        "t": "Pedí lo que necesites",
+        "d": "Sin tener que explicar nada. El equipo entiende.",
+        "dura": null
+      }
+    ],
+    "espacios": [
+      {
+        "t": "Espacio tranquilo",
+        "d": "Lugar con bajo nivel de estímulos: sin música, luz regulable, ambiente controlado.",
+        "tags": ["Sin música", "Luz regulable", "Tranquilo"]
+      },
+      {
+        "t": "Zona de descanso",
+        "d": "Área donde podés estar sin presión ni interrupciones.",
+        "tags": ["Privacidad", "Sin prisa", "Seguro"]
+      },
+      {
+        "t": "Comunicación alternativa",
+        "d": "Podés escribir, señalar, o comunicarte como te sea más cómodo.",
+        "tags": ["Flexibilidad", "Sin obligaciones", "Respeto"]
+      }
+    ],
+    "opciones_tarjeta": [
+      {
+        "boton": "Prefiero escribir en vez de hablar",
+        "msg": "Prefiero escribir",
+        "sub": "Escribí acá o en tu celular. Nos tomamos el tiempo que haga falta."
+      },
+      {
+        "boton": "Necesito un lugar tranquilo",
+        "msg": "Necesito un lugar tranquilo",
+        "sub": "Te acompañamos al espacio tranquilo. Volvés cuando quieras."
+      },
+      {
+        "boton": "Necesito más tiempo",
+        "msg": "Necesito más tiempo",
+        "sub": "Sin apuro. Avisanos cuando estés listo."
+      }
+    ],
+    "demo": false
+  },
+  "propuesta": {
+    "resumen": "Un programa para que el equipo sepa cómo recibir a personas autistas, con TDAH u otras neurodivergencias.",
+    "oportunidad_titulo": "Accesibilidad real",
+    "oportunidad": "Crear espacios donde personas neurodivergentes puedan estar sin barreras relacionales ni sensoriales.",
+    "momentos_criticos": "recepción y atención",
+    "precio_implementacion": "USD 850",
+    "precio_licencia": "USD 480",
+    "precio_primer_ano": "USD 990",
+    "bonificacion": "40%",
+    "ciudad": "",
+    "fecha": "Agosto 2026"
+  },
+  "capacitacion": {
+    "equipo": "atención",
+    "escenas": [
+      {
+        "t": "No te mira a los ojos",
+        "d": "Es cómo se comunica, no es desinterés."
+      },
+      {
+        "t": "Necesita escribir en lugar de hablar",
+        "d": "Es una forma válida de comunicación. Respetar el formato."
+      },
+      {
+        "t": "Se queda en silencio",
+        "d": "Puede estar procesando. Darle tiempo sin presionar."
+      },
+      {
+        "t": "Pide lo mismo varias veces",
+        "d": "Necesita confirmar. Es normal, no es que no te escuchó."
+      }
+    ],
+    "espacios": [
+      {
+        "t": "Espacio tranquilo",
+        "d": "Bajo estímulo, luz regulable, sin música.",
+        "cuando": "Ofrecerlo ante cualquier señal de sobrecarga."
+      },
+      {
+        "t": "Zona de descanso",
+        "d": "Privacidad y calma.",
+        "cuando": "Cuando lo pida o lo necesite."
+      },
+      {
+        "t": "Comunicación flexible",
+        "d": "Escribir, señalar, otro formato.",
+        "cuando": "Siempre disponible."
+      }
+    ],
+    "casos": [
+      {
+        "t": "Persona que no habla",
+        "d": "Llega alguien que se comunica por escrito o gestos. El equipo no sabe qué hacer.",
+        "p": "¿Cómo la recibís?"
+      },
+      {
+        "t": "Señal de sobrecarga",
+        "d": "Alguien empieza a mostrar ansiedad o malestar. Hay más gente esperando.",
+        "p": "¿Qué es lo primero que hacés?"
+      },
+      {
+        "t": "Pedido inusual",
+        "d": "Alguien pide algo que no es lo típico. ¿Cómo lo manejás?",
+        "p": "¿Cuál es tu respuesta?"
+      }
+    ],
+    "notas_casos": "Caso 1: recibir con respeto, ofrecer formas de comunicación alternativa. Caso 2: no es urgencia tuya, es necesidad de ella — dar espacio. Caso 3: si es seguro y viable, hacer el esfuerzo."
+  },
+  "senaletica": {
+    "url_corta": "espacios.eneio.online/e/med",
+    "titular": "Acá podés estar\na tu manera.",
+    "bajada": "Escaneá para saber qué vas a encontrar: espacios tranquilos, comunicación flexible y respeto por cómo sos.",
+    "bajada_corta": "Espacios tranquilos, comunicación flexible y respeto.",
+    "vigencia": "2026"
+  }
+}
