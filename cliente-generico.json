@@ -9,7 +9,7 @@
     "contacto_cargo": ""
   },
   "marca": {
-    "logo_claro": "assets_cliente/logo-blanco.png",
+    "logo_claro": null,
     "logo_oscuro": null,
     "fondo_profundo": "#3B332B",
     "fondo_profundo_2": "#3B332B",
