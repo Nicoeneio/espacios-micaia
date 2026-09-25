@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="description" content="Programa Espacios Neuroamigables para hoteles: capacitación, protocolo y diagnóstico para recibir personas neurodivergentes.">
+<title>Espacios Neuroamigables para Hoteles — MICA IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#80B1DA;
+    --primary-light:#E7F2FF;
+    --primary-lighter:#CBE6FF;
+    --primary-dark:#2F6388;
+    --primary-darker:#0E4B6F;
+    --bg:#F7F9FF;
+    --bg-alt:#ECF0FF;
+    --card:#FCFCFF;
+    --border:#CBE6FF;
+    --text:#565E70;
+    --text-strong:#2C3E50;
+    --text-light:#8A92A6;
+    --radius:16px;
+  }
+
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0D1117;
+      --bg-alt:#161B22;
+      --card:#0D1117;
+      --border:#30363D;
+      --text:#C9D1D9;
+      --text-strong:#E6EDF3;
+      --text-light:#8B949E;
+    }
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Montserrat',system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+    -webkit-user-select:none;
+    user-select:none;
+  }
+
+  h1,h2,h3{
+    font-family:'Poppins',system-ui,sans-serif;
+    font-weight:600;
+    color:var(--text-strong);
+    margin:0;
+  }
+
+  h1{font-size:clamp(28px,7vw,36px); line-height:1.2; margin-bottom:16px;}
+  h2{font-size:clamp(24px,6vw,32px); line-height:1.25; margin-bottom:20px;}
+  h3{font-size:clamp(18px,5vw,22px); line-height:1.3; margin-bottom:12px;}
+  p{margin:0 0 16px; font-size:clamp(14px,4vw,16px); line-height:1.65;}
+
+  .wrap{
+    max-width:640px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  img{max-width:100%; display:block; height:auto;}
+
+  /* --------- HEADER --------- */
+  header{
+    background:linear-gradient(135deg,var(--primary-light),var(--bg-alt));
+    padding:clamp(24px,6vw,40px) 20px;
+    border-bottom:1px solid var(--border);
+  }
+
+  .back-link{
+    display:inline-block;
+    color:var(--primary-dark);
+    text-decoration:none;
+    font-size:clamp(13px,3.5vw,14px);
+    font-weight:600;
+    margin-bottom:16px;
+  }
+
+  .back-link:hover{text-decoration:underline;}
+
+  header h1{
+    font-size:clamp(26px,7vw,40px);
+    color:var(--primary-darker);
+  }
+
+  header p{
+    color:var(--text);
+    max-width:500px;
+    font-size:clamp(14px,4vw,16px);
+  }
+
+  /* --------- SECTIONS --------- */
+  section{
+    padding:clamp(32px,8vw,48px) 0;
+    border-bottom:1px solid var(--border);
+  }
+
+  section:last-of-type{border-bottom:none;}
+
+  .section-title{
+    text-align:center;
+    margin-bottom:clamp(24px,6vw,32px);
+  }
+
+  /* --------- CASE BLOCK --------- */
+  .case-block{
+    background:linear-gradient(135deg,var(--primary-light),var(--bg-alt));
+    border-radius:var(--radius);
+    padding:clamp(24px,6vw,32px);
+    margin-bottom:clamp(24px,6vw,32px);
+    border-left:4px solid var(--primary-dark);
+  }
+
+  .case-block h3{color:var(--primary-darker); margin-bottom:12px;}
+
+  /* --------- HIGHLIGHT BLOCK --------- */
+  .highlight{
+    background:var(--card);
+    border:2px solid var(--primary-lighter);
+    border-radius:var(--radius);
+    padding:clamp(20px,5vw,28px);
+    margin-bottom:clamp(24px,6vw,32px);
+  }
+
+  /* --------- EXAMPLES GRID --------- */
+  .examples{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:clamp(16px,4vw,20px);
+  }
+
+  @media(min-width:500px){
+    .examples{grid-template-columns:1fr 1fr;}
+  }
+
+  .example-item{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:clamp(20px,5vw,24px);
+  }
+
+  .example-item h3{font-size:clamp(15px,4vw,17px); margin-bottom:8px;}
+  .example-item p{font-size:clamp(13px,3.5vw,14px); margin:0;}
+
+  /* --------- DELIVERABLES --------- */
+  .deliverables{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:clamp(16px,4vw,20px);
+  }
+
+  @media(min-width:500px){
+    .deliverables{grid-template-columns:1fr 1fr;}
+  }
+
+  .deliverable{
+    background:linear-gradient(135deg,rgba(128,177,218,0.1),rgba(182,162,222,0.1));
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:clamp(20px,5vw,24px);
+  }
+
+  .deliverable-num{
+    font-family:'Poppins',sans-serif;
+    font-size:clamp(28px,8vw,36px);
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:8px;
+  }
+
+  .deliverable h3{font-size:clamp(15px,4vw,17px); margin-bottom:8px;}
+  .deliverable p{font-size:clamp(13px,3.5vw,14px); margin:0;}
+
+  /* --------- CTA --------- */
+  .cta{
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+    color:white;
+    padding:clamp(24px,6vw,32px);
+    border-radius:var(--radius);
+    text-align:center;
+    margin:clamp(24px,6vw,32px) 0;
+    text-decoration:none;
+    display:block;
+    font-weight:600;
+    font-size:clamp(15px,4vw,16px);
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:all 0.2s ease;
+  }
+
+  .cta:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 16px rgba(128,177,218,0.3);
+  }
+
+  .cta:active{
+    transform:translateY(0);
+  }
+
+  /* --------- FOOTER --------- */
+  footer{
+    background:var(--bg-alt);
+    padding:clamp(24px,6vw,32px) 20px;
+    text-align:center;
+    border-top:1px solid var(--border);
+    font-size:clamp(12px,3vw,13px);
+  }
+
+  footer a{
+    color:var(--primary-dark);
+    text-decoration:none;
+  }
+
+  footer a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="/" class="back-link">← Volver a programas</a>
+    <h1>Espacios Neuroamigables para Hoteles</h1>
+    <p>Capacitación, protocolo y diagnóstico para recibir a personas neurodivergentes y sus familias.</p>
+  </div>
+</header>
+
+<main>
+  <!-- ========== CASE STUDY ========== -->
+  <section>
+    <div class="wrap">
+      <div class="case-block">
+        <h3>El viaje de Romina y Santi</h3>
+        <p>Romina y Santi no salían del barrio. Todas las salidas terminaban mal: Santi se desbordaba, el equipo no entendía, la familia se iba con culpa.</p>
+        <p>Una noche, un hotel en Rosario les mandó un mail: "Acá sabemos cómo recibirte. Sin explicaciones, sin cargas morales. Vení cuando quieras."</p>
+        <p>Ese mail cambió todo. No fue por la habitación ni por el precio. Fue porque alguien se tomó el tiempo de aprender a escuchar de otra forma.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== THE INVESTIGATION ========== -->
+  <section>
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Cada viaje empieza con una investigación</h2>
+      </div>
+      <p>Para viajar, Romina y Santi necesitaban saber exactamente qué iban a encontrar. ¿Cuánto ruido hay en el desayuno? ¿Hay un lugar tranquilo si Santi se desborda? ¿El equipo entiende que comunicar distinto no es mala educación?</p>
+      <p>Eso que ellos necesitaban investigar es lo que el programa resuelve. No con explicaciones confusas, sino con información clara, fácil de leer, que muestra escenarios reales.</p>
+    </div>
+  </section>
+
+  <!-- ========== THE REAL GUEST ========== -->
+  <section>
+    <div class="wrap">
+      <div class="highlight">
+        <h2>Ese es un huésped que tu espacio no perdió por precio ni por ubicación</h2>
+        <p>Es una familia completa que eligió otro hotel porque sabía cómo iba a ser recibida. Es el huésped neurodivergente que trae a su familia y amigos porque le funcionó bien. Es el que vuelve año tras año.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REAL EXAMPLES ========== -->
+  <section>
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Ejemplos reales: cómo hizo un hotel</h2>
+      </div>
+      <div class="examples">
+        <div class="example-item">
+          <h3>La sala de reuniones</h3>
+          <p>Un huésped neurodivergente necesitaba un lugar sin ruido para descansar entre actividades. El hotel abrió la sala de reuniones: espacio controlado, sin sobreestimulación.</p>
+        </div>
+        <div class="example-item">
+          <h3>El salón con paneles</h3>
+          <p>Para el desayuno o cena en grupo, ofrece el salón con paneles acústicos, lejos del bullicio del comedor principal.</p>
+        </div>
+        <div class="example-item">
+          <h3>La franja del desayuno</h3>
+          <p>Un horario fijo de 7 a 8 a.m. en un sector separado, con menos gente. Así familias con TGD pueden desayunar sin presión.</p>
+        </div>
+        <div class="example-item">
+          <h3>La terraza posterior</h3>
+          <p>Un espacio tranquilo y seguro donde los huéspedes neurodivergentes pueden estar, sin obligación de explicar por qué necesitan estar solos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section>
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Cómo funciona el programa</h2>
+      </div>
+      <div class="deliverables">
+        <div class="deliverable">
+          <div class="deliverable-num">1</div>
+          <h3>Diagnóstico</h3>
+          <p>Visitamos tu hotel. Hablamos con el equipo. Identificamos barreras reales.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-num">2</div>
+          <h3>Protocolo a medida</h3>
+          <p>Diseñamos un plan específico para tu hotel. Flexible y ejecutable.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-num">3</div>
+          <h3>Capacitación presencial</h3>
+          <p>Entrenamos a tu equipo con escenarios reales, sin tecnicismos.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-num">4</div>
+          <h3>Materiales accesibles</h3>
+          <p>Generamos información clara que publicás en tu sitio para quién llega por primera vez.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-num">5</div>
+          <h3>Acompañamiento inicial</h3>
+          <p>Durante 30 días te acompañamos en la implementación.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-num">6</div>
+          <h3>Capacitación continua con MICA</h3>
+          <p>Tu equipo tiene acceso a MICA, un asistente de IA que responde dudas en el momento ("un huésped se está desbordando, ¿qué hago?") y guía capacitaciones de nuevos integrantes, a su ritmo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DEMO ========== -->
+  <section>
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Mirá cómo se ve</h2>
+      </div>
+      <p>Acá te mostramos cómo se ve la landing que un hotel publicaría. Escaneá el código de una habitación, y esto es lo que un huésped neurodivergente ve:</p>
+      <a href="/e/med" class="cta" style="margin:24px 0; display:inline-block; width:100%; text-align:center;">Ver demo en vivo</a>
+      <p style="font-size:clamp(12px,3vw,13px); color:var(--text-light); text-align:center;">Código para probar: <strong>BUREAU2026</strong> o <strong>AHRU2026</strong></p>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA ========== -->
+  <section>
+    <div class="wrap">
+      <div class="section-title">
+        <h2>¿Listo para empezar?</h2>
+      </div>
+      <a href="https://wa.me/5493415637943?text=Hola!%20Me%20interesa%20el%20programa%20Espacios%20Neuroamigables%20para%20mi%20hotel." class="cta">Pedir la visita de diagnóstico</a>
+      <p style="text-align:center; font-size:clamp(12px,3vw,13px); color:var(--text-light); margin:12px 0 0;">Visita de 30 minutos, sin cargo y sin compromiso.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Programa Espacios Neuroamigables de <a href="https://www.micaia.app" target="_blank">MICA IA</a></p>
+    <p style="margin:8px 0 0; font-size:clamp(11px,2.5vw,12px);">Desarrollado para la comunidad de personas neurodivergentes de Latinoamérica.</p>
+  </div>
+</footer>
+
+</body>
+</html>
